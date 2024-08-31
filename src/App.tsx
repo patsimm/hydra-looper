@@ -13,7 +13,7 @@ function App() {
         const link = links[index % links.length]
         console.log(`showing link ${link}`)
         setLink(link)
-        setTimeout(() => next(index+1), 10000)
+        setTimeout(() => next(index+1), 30000)
       }
      next(0);
     })
