@@ -6,11 +6,11 @@ function App() {
   const [link, setLink] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch("/links-slashwhy.txt").then(async (res)=> {
+    fetch("/links.txt").then(async (res)=> {
       const text = await res.text()
       const links = text.split("\n").map(link => link.trim());
       const randomIndex = () => Math.floor((Math.random() * links.length));
-      const randomTimeout = () => 10000 + Math.floor(Math.random() * 20000)
+      const randomTimeout = () => 10000 + Math.floor(Math.random() * 50000)
       const next = (index: number) => {
         const link = links[index % links.length]
         setLink(link)
